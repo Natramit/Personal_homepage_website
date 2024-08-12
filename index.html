@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Rainanxu_web_test</title>
+    <script>
+        function loaded(){
+            setTimeout(function(){
+                img_show();
+            },600);
+        }
+        function img_show(){
+            const postion_list=['0%','10%','20%','30%','40%','50%','60%','70%','80%','90%'];
+            const opacity_list=['0.1','0.2','0.25','0.3','0.35','0.4','0.45','0.5','0.75','1.0'];
+            const img_src='0000.png';
+            const ID_T=['img_box_id_','img_id_'];
+            let number0=9;
+            function show(number_in=0){
+                document.getElementById(ID_T[1]+number_in).src=img_src;
+                document.getElementById(ID_T[1]+number_in).style.opacity=opacity_list[number_in];
+                document.getElementById(ID_T[1]+number_in).style.left='-'+postion_list[number_in];
+                document.getElementById(ID_T[0]+number_in).style.left=postion_list[number_in];
+            }
+            function load_start(){
+                for(;;){
+                    if(number0<=-1)return 0;
+                    show(number0);
+                    number0--;
+                }
+            }
+            document.getElementById('img_load_id').addEventListener('load',function(){
+                load_start();
+            });
+            document.getElementById('img_load_id').src=img_src;
+        }
+    </script>
+<style>
+.Remove_spacing_between_divs {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background: var(--Back_Color_Board);
+}
+.Remove_spacing_between_divs::-webkit-scrollbar {
+    display: none;
+}
+    .home{
+        height: 100vh;
+        width: 100vw;
+    }
+    .top_page{
+        top: 0;
+        left: 0;
+        position: fixed;
+        height: 200px;
+        width: 100%;
+    }
+    .background{
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        object-fit: cover;
+        object-position: 70% 33%;
+        border-radius: 0px;
+    }
+    .img_box{
+        overflow: hidden;
+        pointer-events: none;
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        height: 80%;
+        width: 60%;
+    }
+    .img_box_t{
+        transition: left 0.8s;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        left: 100%;
+        position: absolute;
+        top: 0;
+    }
+    .img_t{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        object-fit: cover;
+        object-position: 70% 33%;
+        border-radius: 0px;
+    }
+    h1{
+        text-align: center;
+        color: aliceblue;
+    }
+</style>
+</head>
+
+<body class="Remove_spacing_between_divs" onLoad="loaded()">
+    <div class="home">
+        <img class="background" alt="background" src="0000.png">
+        <div class="img_box">
+            <img id="img_load_id" style="display: none" alt="img_load">
+            <div id="img_box_id_0" class="img_box_t">
+                <img id="img_id_0" class="img_t" alt="img">
+            </div>
+            <div id="img_box_id_1" class="img_box_t">
+                <img id="img_id_1" class="img_t" alt="img">
+            </div>
+            <div id="img_box_id_2" class="img_box_t">
+                <img id="img_id_2" class="img_t" alt="img">
+            </div>
+            <div id="img_box_id_3" class="img_box_t">
+                <img id="img_id_3" class="img_t" alt="img">
+            </div>
+            <div id="img_box_id_4" class="img_box_t">
+                <img id="img_id_4" class="img_t" alt="img">
+            </div>
+            <div id="img_box_id_5" class="img_box_t">
+                <img id="img_id_5" class="img_t" alt="img">
+            </div>
+            <div id="img_box_id_6" class="img_box_t">
+                <img id="img_id_6" class="img_t" alt="img">
+            </div>
+            <div id="img_box_id_7" class="img_box_t">
+                <img id="img_id_7" class="img_t" alt="img">
+            </div>
+            <div id="img_box_id_8" class="img_box_t">
+                <img id="img_id_8" class="img_t" alt="img">
+            </div>
+            <div id="img_box_id_9" class="img_box_t">
+                <img id="img_id_9" class="img_t" alt="img">
+            </div>
+            
+        </div>
+        <div class="top_page">
+            <h1>test page for Rainanxu</h1>
+        </div>
+        
+    </div>
+</body>
+</html>
