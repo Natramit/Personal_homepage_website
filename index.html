@@ -33,8 +33,8 @@
             });
             document.getElementById('img_load_id').src=img_src;
         }
-        function show_background_img(){
-            document.getElementById("background_img_id").style.opacity='1';
+        function background_img_show(){
+            document.getElementById('background_img_id').style.opacity='1';
         }
     </script>
 <style>
@@ -70,15 +70,41 @@
         object-position: 70% 33%;
         border-radius: 0px;
     }
-    .img_box{
-        overflow: hidden;
-        pointer-events: none;
-        position: absolute;
-        top: 20%;
-        left: 10%;
-        height: 80%;
-        width: 60%;
+    
+        .img_box{
+            overflow: hidden;
+            pointer-events: none;
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            height: 80%;
+            width: 60%;
+        }
+    
+    @media (max-width:1000px){
+        .img_box{
+            overflow: hidden;
+            pointer-events: none;
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            height: 80%;
+            width: 80%;
+        }
     }
+    
+    @media (max-width:700px){
+        .img_box{
+            overflow: hidden;
+            pointer-events: none;
+            position: absolute;
+            top: 20%;
+            left: 0%;
+            height: 80%;
+            width: 100%;
+        }
+    }
+    
     .img_box_t{
         transition: left 0.8s;
         overflow: hidden;
@@ -106,7 +132,7 @@
 
 <body class="Remove_spacing_between_divs" onLoad="loaded()">
     <div class="home">
-        <img id="background_img_id" onload="show_background_img()" class="background" alt="background" src="0000.png">
+        <img id="background_img_id" onload="background_img_show()" class="background" alt="background" src="0000.png">
         <div class="img_box">
             <img id="img_load_id" style="display: none" alt="img_load">
             <div id="img_box_id_0" class="img_box_t">
