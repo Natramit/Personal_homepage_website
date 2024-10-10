@@ -176,10 +176,23 @@
             align-items: center;
         }
 
-        .headshot {
+        .headshot_home {
             width: 40%;
             max-width: 350px;
             margin: 24px 3% 24px 3%;
+            position: relative;
+        }
+
+        .headshot_height{
+            width: 100%;
+            padding-top: 100%;
+        }
+
+        .headshot {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
             border-radius: 50%;
             overflow: hidden;
             border-style: solid;
@@ -246,7 +259,7 @@
         }
 
         @media(max-width:700px) {
-            .headshot {
+            .headshot_home {
                 width: 80%;
                 margin: 24px 10% 24px 10%;
             }
@@ -487,8 +500,11 @@
         <div id="layout_page" class="layout_page">
             <div class="layout_style">
                 <div class="header">
-                    <div id="headshot_div" class="headshot">
-                        <img class="headshot_img" src="imgs/headshot.jpg" alt="headshot">
+                    <div class="headshot_home">
+                        <div class="headshot_height"></div>
+                        <div id="headshot_div" class="headshot">
+                            <img class="headshot_img" src="imgs/headshot.jpg" alt="headshot">
+                        </div>
                     </div>
                     <div class="messages">
                         <h1 class="name">须语</h1>
