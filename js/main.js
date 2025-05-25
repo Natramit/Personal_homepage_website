@@ -8,6 +8,7 @@ function loaded() {
 function close_loading_page() {
     let div_E = document.getElementById('loading_page');
     div_E.style.opacity = 0;
+    div_E.style.fontSize = "20rem";
     setTimeout(function () {
         div_E.style['z-index'] = -2;
         div_E.style['pointer-events'] = 'none';

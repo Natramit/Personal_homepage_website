@@ -1,7 +1,7 @@
 .Remove_spacing_between_divs {
     margin: 0;
     padding: 0;
-    background: hsla(0, 0%, 27%, 1.00);
+    background: hsl(229, 19%, 17%);
     overflow: hidden;
 }
 
@@ -24,9 +24,10 @@ div {
     width: 100%;
     top: 0px;
     left: 0px;
-    background: hsla(0, 0%, 22%, 1.00);
+    background: hsl(229, 19%, 17%);
     opacity: 1;
     transition: opacity 1s;
+    font-size: 0.8rem;
 }
 
 .loading {
@@ -52,25 +53,25 @@ div {
     left: 50%;
     background: transparent;
     border-style: solid;
-    border-width: 2px;
+    border-width: 0.2e;
     border-radius: 100%;
     animation: loading_animation 2s ease-in-out infinite;
 }
 
 .loading>div:first-child {
     position: absolute;
-    width: 64px;
-    height: 64px;
-    border-width: 6px;
+    width: 8em;
+    height: 8em;
+    border-width: 0.8em;
     border-right-color: transparent;
     border-left-color: transparent;
     transform: translate(-50%, -50%);
 }
 
 .loading>div:last-child {
-    width: 16px;
-    height: 16px;
-    border-width: 10px;
+    width: 2em;
+    height: 2em;
+    border-width: 1.2em;
     border-top-color: transparent;
     border-bottom-color: transparent;
     animation-duration: 1s;
