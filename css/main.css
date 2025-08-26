@@ -459,6 +459,10 @@ b::after {
     content: ")";
 }
 
+.cross_out {
+    text-decoration: line-through;
+}
+
 h1 {
     text-align: center;
     color: aliceblue;
