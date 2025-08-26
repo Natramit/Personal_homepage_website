@@ -113,7 +113,7 @@ div {
 
 .layout_page_side {
     margin: 0px 100px 0px auto;
-    max-width: 1024px;
+    max-width: max( 1024px, 47vw);
     overflow: hidden;
     display: grid;
     grid-template-rows: 0fr;
